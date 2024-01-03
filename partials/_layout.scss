@@ -1,0 +1,304 @@
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+// BG HOME
+
+.bg-home{
+  position: relative;
+}
+
+.bg-home::before{
+  content: '';
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+// Hero
+
+.hero{
+  color: $white-normal;
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+
+  h1{
+    text-align: center;
+    line-height: 150%;
+    max-width: 940px;
+    font-size: 40px;
+  }
+
+  p{
+    text-align: center;
+    font-size: 16px;
+    padding: 14px 0;
+  }
+}
+
+.button-contact{
+  padding: 14px 28px;
+  color: $white-normal;
+  background-color: $red-normal;
+  border: 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-contact:hover{
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .hero{
+    min-height: 60vh;
+
+    h1{
+      font-size: 30px;
+      padding: 0 14px;
+      width: 100%;
+    }
+
+    p{
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  .hero h1{
+    font-size: 24px;
+  }
+  .hero p{
+    font-size: 12px;
+  }
+}
+
+// About
+
+.about{
+  background-color: $primary-normal;
+  overflow: hidden;
+  color: $white-normal;
+}
+
+.about-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 34px 40px 64px 40px;
+
+  img{
+    max-width: 500px;
+  }
+}
+
+.about-content div{
+  flex: 1;
+}
+
+.about-description{
+  h2{
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  p{
+    margin-bottom: 14px;
+    line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-content{
+    flex-direction: column;
+
+    img{
+      max-width: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-description{
+    h2{
+      font-size: 28;
+    }
+  }
+}
+
+// Products
+
+.catalog{
+  background-color: $white-normal;
+  color: $secondary-normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 15px;
+}
+
+.products-content h2{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.products-content p{
+  line-height: 150%;
+  max-width: 780px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 0 44px 34px 44px;
+}
+
+.product{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: $white-normal;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgb(0,0,0, 0.45);
+
+  overflow: hidden;
+
+  img{
+    width: 100%;
+    max-width: 354px;
+    transition: transform 0.2s;
+  }
+}
+
+.product img:hover{
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.product-info{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: $white-normal;
+  z-index: 2;
+}
+
+.product-info button{
+  background-color: $red-normal;
+  color: $white-normal;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 4px;
+  cursor: default;
+}
+
+@media screen and (max-width: 768px){
+  .products{
+    flex-direction: column;
+  }
+}
+
+// Footer
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0px;
+  gap: 24px;
+  color: $white-normal;
+  
+  p{
+    font-size: 14px;
+  }
+}
+
+.footer-icons{
+  display: flex;
+  gap: 10px;
+  color: $white-normal;
+}
+
+// BTN Whats
+
+.btn-whatsapp{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9;
+
+  img{
+    max-width: 70px;
+    transition: transform 0.5s;
+  }
+
+  img:hover{
+    transform: scale(1.1);
+  }
+}
+
+.btn-whatsapp .tooltip-text{
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -145px;
+  padding: 6px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: $secondary-normal;
+  color: $white-normal;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.btn-whatsapp:hover .tooltip-text{
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-whatsapp{
+    max-width: 60px;
+  }
+}
