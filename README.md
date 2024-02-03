@@ -12,6 +12,4 @@ Através dessa página o cliente poderá visualizar uma prévia do catálogo dis
 * CSS3
 * SCSS
 
-### Acesso
-
-link: https://chimports.vercel.app/
+#### [Acesse o site](https://chimports.vercel.app/)
